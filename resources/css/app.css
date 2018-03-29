@@ -33,24 +33,31 @@ body{
   padding: 0;
   list-style-type: none;
 }
+
 .todo_list ul > li{
-  padding: 0;
+  padding-left: 23px;
   background: #fff;
   height: 40px;
   line-height: 40px;
   color: #666;
 }
+
+.todo_list ul > li:nth-child(even) {
+  background-color: #f7f7f7;
+}
 #todobox{
   display: block;
-  box-sizing: border-box;
   width: 100%;
+  color: #2980b9;
   font-size: 18px;
   padding: 13px 13px 13px 20px;
-  border: none;
+  box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
 }
 #todobox:focus{
   border: 3px solid #2980b9;
   outline: none;
+  background: #fff;
 }
 .todo_list .fa-trash{
   background: #e74c3c;
