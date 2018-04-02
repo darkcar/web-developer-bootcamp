@@ -1,0 +1,15 @@
+{
+  "name": "packagedemo",
+  "version": "1.0.0",
+  "description": "This is the simple package.json file creation. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Wang",
+  "license": "ISC",
+  "dependencies": {
+    "cat-me": "^1.0.3",
+    "express": "^4.16.3"
+  }
+}
