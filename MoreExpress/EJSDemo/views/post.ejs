@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="app.css">
+
+<h1>Hello to my post page!!!</h1>
+<%
+for(var i = 0; i < postsVar.length; i ++){
+%>
+  <li><%=postsVar[i].title%> - <%= postsVar[i].author%></li>
+<%
+}
+%>
+
+<%
+  postsVar.forEach(function(post){
+%>
+  <li><%=post.title%> - <%=post.author%></li>
+<%
+  })
+%>

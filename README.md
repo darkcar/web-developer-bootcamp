@@ -16,4 +16,8 @@
 
 * Use res.render() to render HTML (from an EJS file)
 
-* 
+* For loop for ejs template.
+
+    Use basic javascript or use forEach function. 
+
+
