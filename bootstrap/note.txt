@@ -1,0 +1,28 @@
+1. HTML5 doctype
+  <!doctype html>
+  <html lang="en"></html>
+
+2. Responsive meta tag
+  Bootstrap is developed mobile first.
+  Add the responsive viewport meta tag to your head.
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+3. box-sizing:
+  default: content-box: width and height only apply to the content of the element.
+  border-box: width and height apply to all parts of the element: content, padding and borders.
+  learn more from here: https://css-tricks.com/box-sizing/
+
+4. Layout
+  container is required when using our default grid system.
+  Choose from a responsive, fixed-width container or fluid-width.
+
+5. Responsive breakpoint:
+  // Small devices
+  @media (min-width: 576px) {}
+  // tablet devices
+  @media (min-width: 768px) {}
+  // Desktop
+  @media (min-width: 992px) {}
+  // large screen
+  @media (min-width: 1200px) {}
+  

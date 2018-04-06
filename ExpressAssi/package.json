@@ -1,0 +1,14 @@
+{
+  "name": "expressassi",
+  "version": "1.0.0",
+  "description": "This is the express assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
