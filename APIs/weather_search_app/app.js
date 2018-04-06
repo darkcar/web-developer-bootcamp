@@ -10,10 +10,16 @@ app.get("/", function(req, res){
 
 // query page
 app.get("/query", function(req, res){
-    var city = eq.query.city;
-    
-    res.render("result");
+    var city = req.query.city;
+    var url = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\""+city+"\")&format=json&env=store://datatables.org/alltableswithkeys";
+    request(url, function(error, response, body){
+        if(!error && response.statusCode == 200) {
+            var results = JSON.parse(body).query.results.channel;
+            res.render("result", {resultsVar:results});
+        }
+    });  
 });
+
 // create server
 app.listen(3000, function(){
     console.log("Welcome to weather search app~");
