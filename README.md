@@ -42,3 +42,21 @@ request("http://google.ca", function(error, response, body){
 
 ## get request: req.query.name;
 
+SQL(relational) vs. NoSQL(non-relational)
+
+================================
+A NON_RELATIONAL DATABASE:
+================================
+{
+    name: "Ira",
+    age: 24,
+    city: Missoula,
+    comments: [
+        {text:"come visit Montana!"}
+    ]
+}
+
+## MongoDB? - Mean (Mongo express angular node)
+
+Non-relational database.
+
