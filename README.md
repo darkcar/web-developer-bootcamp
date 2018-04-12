@@ -60,3 +60,36 @@ A NON_RELATIONAL DATABASE:
 
 Non-relational database.
 
+## Mongo Commands
+
+- mongod: start mongo server.
+
+- mongo: opens up mongo shell.
+
+- help: show help commands.
+
+- show dbs: 
+
+- use
+
+- insert
+
+- find
+
+- update 
+
+- remove
+
+- show collections
+
+-db.campgournds.drop()
+
+
+## RESTful routes
+
+name        url         verb        desc
+========================================
+INDEX       /dogs       GET         Display a list of all dog
+NEW         /dogs/new   GET         Display form to make a new dog
+CREATE      /dogs       POST        Add new dog to DB
+SHOW        /dogs/:id   GET         Shows info about one dog
