@@ -1,0 +1,19 @@
+{
+  "name": "frankblogs",
+  "version": "1.0.0",
+  "description": "This is my blog which I use Node.js and Bootstrap built. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Wang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.14"
+  }
+}
