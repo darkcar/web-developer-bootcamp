@@ -9,11 +9,13 @@
  *- ejs
  * Step 3. create .env file 
  *- IP=127.0.0.1
- *- PORT=3000
+ *- PORT=9000
  */
 /*local variable */
 var bodyParser = require('body-parser'),
 express        = require('express'),
+// expressSanitizer
+//                = require('express-sanitizer'),
 app            = express();
 
 /*const variable */
@@ -26,6 +28,7 @@ mongoose.connect("mongodb://localhost/frank_blogs_app");
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
+// app.use(expressSanitizer);
 app.use(methodOverride('_method'));
 
 /**Mongoose Model config */
@@ -60,6 +63,9 @@ app.get('/blogs/new', function(req, res){
 
 // Create blog
 app.post('/blogs', function(req, res){
+    // console.log(req.body);
+    // req.body.blog.body = req.santizie(req.body.blog.body);
+    // console.log(err);
     Blog.create(req.body.blog, function(err, newBlog){
         if(err){
             console.log(err);
@@ -93,6 +99,7 @@ app.get('/blogs/:id/edit', function(req, res){
     });
 });
 
+// put route, find and update.
 app.put('/blogs/:id', function(req, res){
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
         if(err) {
@@ -106,13 +113,13 @@ app.put('/blogs/:id', function(req, res){
 
 // delete route
 app.delete('/blogs/:id', function(req, res){
-    // Blog.findByIdAndRemove(req.params.id, function(err){
-    //     if(err) {
-    //         res.redirect('/blogs');
-    //     } else {
-    //         res.redirect('/blogs');
-    //     }
-    // });
+    Blog.findByIdAndRemove(req.params.id, function(err){
+        if(err) {
+            res.redirect('/blogs');
+        } else {
+            res.redirect('/blogs');
+        }
+    });
     res.redirect('/blogs');
 
 });

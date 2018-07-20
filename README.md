@@ -107,3 +107,12 @@ Read
 Update
 Destroy
 
+
+## Associations
+
+### Embedding DATA
+
+User 
+Post
+
+
